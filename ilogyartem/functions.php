@@ -30,7 +30,21 @@ add_action('after_setup_theme', 'ilogy_setup');
 		'menu-footer-page' => esc_html__( 'Подвал-страницы', 'ilogy' ) 
     )
 );
+
+add_filter( 'upload_mimes', 'svg_upload_allow' );
+
+# Добавляет SVG в список разрешенных для загрузки файлов.
+function svg_upload_allow( $mimes ) {
+	$mimes['svg']  = 'image/svg+xml';
+
+	return $mimes;
+}
   
+
+
+
+
+
 
 //    Цепляемся к событию для выода виджетов
 add_action('widgets_init', 'ilogy_widgets_init');

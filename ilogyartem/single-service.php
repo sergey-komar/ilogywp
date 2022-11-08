@@ -12,7 +12,7 @@ get_header();
 				?>
 					<div class="slider__inner">
 					<div class="slider__wrapper-block">
-						<div class="slider__block">
+						<div class="slider__block slider__block-page">
 							<div class="slider__content">
 								<div class="slider__content-title">
 								<?php the_field('zagolovok')?>
@@ -86,16 +86,20 @@ get_header();
 				</p>
 				<ul class="copying__list">
 					<li class="copying__list-item">
-						<a href="#" class="copying__list-link">Маркированный список 1</a>
+						<img src="<?php echo get_template_directory_uri()?>/assets/images/page/page-icon.svg" alt="" class="copying__list-item-img">
+						<a href="#" class="copying__list-link"> <?php the_field('markirovannyj_spisok_1')?></a>
 					</li>
 					<li class="copying__list-item">
-						<a href="#" class="copying__list-link">Маркированный список 1</a>
+					<img src="<?php echo get_template_directory_uri()?>/assets/images/page/page-icon.svg" alt="" class="copying__list-item-img">
+						<a href="#" class="copying__list-link"><?php the_field('markirovannyj_spisok_2')?></a>
 					</li>
 					<li class="copying__list-item">
-						<a href="#" class="copying__list-link">Маркированный список 1</a>
+					<img src="<?php echo get_template_directory_uri()?>/assets/images/page/page-icon.svg" alt="" class="copying__list-item-img">
+						<a href="#" class="copying__list-link"><?php the_field('markirovannyj_spisok_3')?></a>
 					</li>
 					<li class="copying__list-item">
-						<a href="#" class="copying__list-link">Маркированный список 1</a>
+					<img src="<?php echo get_template_directory_uri()?>/assets/images/page/page-icon.svg" alt="" class="copying__list-item-img">
+						<a href="#" class="copying__list-link"><?php the_field('markirovannyj_spisok_4')?></a>
 					</li>
 				</ul>
 			</div>
@@ -241,45 +245,26 @@ get_header();
 						<div class="table-main__price">Стоимость </div>
 						<div class="table-main__desc">Описание услуги</div>
 					</div>
+					<?php if(have_rows('uslugi_vverh')) : while(have_rows('uslugi_vverh')) : the_row(); ?>
 					<div class="table__top">
-						<div class="table__top-title">Перенос сервера за пределы офиса</div>
-						<div class="table__top-price">от 10 000 рублей</div>
+						<div class="table__top-title"><?php the_sub_field('uslugaya_pervaya')?></div>
+						<div class="table__top-price"><?php the_sub_field('stoimost_pervaya')?></div>
 						<div class="table__top-desc">
-							Какое-то описание услуги, сейчас просто текст для
-							понимания заполнения
+                        <?php the_sub_field('opisanie_pervoe')?>
 						</div>
 					</div>
+					<?php endwhile; endif; ?>
+					<?php if(have_rows('usluga_niz')) : while(have_rows('usluga_niz')) : the_row(); ?>
 					<div class="table__bottom">
 						<div class="table__bottom-title">
-							Система резервного копирования
+                        <?php the_sub_field('usluga_vtoraya')?>
 						</div>
-						<div class="table__bottom-price">5 000 — 25 000 рублей</div>
+						<div class="table__bottom-price"><?php the_sub_field('stoimost_vtoraya')?></div>
 						<div class="table__bottom-desc">
-							Какое-то описание услуги, сейчас просто текст для
-							понимания заполнения
+                        <?php the_sub_field('opisanie_vtoroe')?>
 						</div>
 					</div>
-					<div class="table__top">
-						<div class="table__top-title">
-							Удаленный доступ к 1С из
-							любой точки
-						</div>
-						<div class="table__top-price">7 500 рублей за раб. место</div>
-						<div class="table__top-desc">
-							Какое-то описание услуги, сейчас просто текст для
-							понимания заполнения
-						</div>
-					</div>
-					<div class="table__bottom">
-						<div class="table__bottom-title">
-							Объединение офисов в единую сеть
-						</div>
-						<div class="table__bottom-price">уточняйте</div>
-						<div class="table__bottom-desc">
-							Какое-то описание услуги, сейчас просто текст для
-							понимания заполнения текстом в две строки
-						</div>
-					</div>
+					<?php endwhile; endif; ?>
 				</div>
 			</div>
 		</div>

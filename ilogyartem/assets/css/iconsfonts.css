@@ -11,7 +11,6 @@
 }
 
 [class^="icon-"]::before, [class*=" icon-"]::before {
-  /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
   font-style: normal;
@@ -25,12 +24,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-header-icon-1:before {
+/* .icon-header-icon-1:before {
   content: "\e900";
   color: #AFAFAF;
   top: -54px;
     position: relative;
 }
+
 .icon-header-icon-2:before {
   content: "\e901";
   color: #AFAFAF;
@@ -126,4 +126,4 @@
   color: #595959;
   top: -37px;
     position: relative;
-}
+} */

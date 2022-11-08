@@ -12,7 +12,7 @@ get_header();
 				?>
 					<div class="slider__inner">
 					<div class="slider__wrapper-block">
-						<div class="slider__block">
+						<div class="slider__block slider__block-page">
 							<div class="slider__content">
 								<div class="slider__content-title">
 								<?php the_field('zagolovok')?>
@@ -74,15 +74,19 @@ get_header();
 				</p>
 				<ul class="copying__list">
 					<li class="copying__list-item">
+						<img src="<?php echo get_template_directory_uri()?>/assets/images/page/page-icon.svg" alt="" class="copying__list-item-img">
 						<a href="#" class="copying__list-link"> <?php the_field('markirovannyj_spisok_1')?></a>
 					</li>
 					<li class="copying__list-item">
+					<img src="<?php echo get_template_directory_uri()?>/assets/images/page/page-icon.svg" alt="" class="copying__list-item-img">
 						<a href="#" class="copying__list-link"><?php the_field('markirovannyj_spisok_2')?></a>
 					</li>
 					<li class="copying__list-item">
+					<img src="<?php echo get_template_directory_uri()?>/assets/images/page/page-icon.svg" alt="" class="copying__list-item-img">
 						<a href="#" class="copying__list-link"><?php the_field('markirovannyj_spisok_3')?></a>
 					</li>
 					<li class="copying__list-item">
+					<img src="<?php echo get_template_directory_uri()?>/assets/images/page/page-icon.svg" alt="" class="copying__list-item-img">
 						<a href="#" class="copying__list-link"><?php the_field('markirovannyj_spisok_4')?></a>
 					</li>
 				</ul>
@@ -221,40 +225,26 @@ get_header();
 						<div class="table-main__price">Стоимость </div>
 						<div class="table-main__desc">Описание услуги</div>
 					</div>
+					<?php if(have_rows('uslugi_vverh')) : while(have_rows('uslugi_vverh')) : the_row(); ?>
 					<div class="table__top">
-						<div class="table__top-title"><?php the_field('usluga_1')?></div>
-						<div class="table__top-price"><?php the_field('stoimost_1')?></div>
+						<div class="table__top-title"><?php the_sub_field('uslugaya_pervaya')?></div>
+						<div class="table__top-price"><?php the_sub_field('stoimost_pervaya')?></div>
 						<div class="table__top-desc">
-                        <?php the_field('opisanie_1')?>
+                        <?php the_sub_field('opisanie_pervoe')?>
 						</div>
 					</div>
+					<?php endwhile; endif; ?>
+					<?php if(have_rows('usluga_niz')) : while(have_rows('usluga_niz')) : the_row(); ?>
 					<div class="table__bottom">
 						<div class="table__bottom-title">
-                        <?php the_field('usluga_2')?>
+                        <?php the_sub_field('usluga_vtoraya')?>
 						</div>
-						<div class="table__bottom-price"><?php the_field('stoimost_2')?></div>
+						<div class="table__bottom-price"><?php the_sub_field('stoimost_vtoraya')?></div>
 						<div class="table__bottom-desc">
-                        <?php the_field('opisanie_2')?>
+                        <?php the_sub_field('opisanie_vtoroe')?>
 						</div>
 					</div>
-					<div class="table__top">
-						<div class="table__top-title">
-                        <?php the_field('usluga_3')?>
-						</div>
-						<div class="table__top-price"><?php the_field('stoimost_3')?></div>
-						<div class="table__top-desc">
-                        <?php the_field('opisanie_3')?>
-						</div>
-					</div>
-					<div class="table__bottom">
-						<div class="table__bottom-title">
-                        <?php the_field('usluga_4')?>
-						</div>
-						<div class="table__bottom-price"><?php the_field('stoimost_4')?></div>
-						<div class="table__bottom-desc">
-                        <?php the_field('opisanie_4')?>
-						</div>
-					</div>
+					<?php endwhile; endif; ?>
 				</div>
 			</div>
 		</div>

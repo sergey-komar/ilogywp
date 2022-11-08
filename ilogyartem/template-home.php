@@ -29,9 +29,9 @@ get_header();
                         <div class="slider__content-title ">
                         <?php the_title()?>
                         </div>
-                        <p class="slider__content-text">
+                        <div class="slider__content-text">
                             <?php the_content();?>
-                        </p>
+                        </div>
                         <button class="slider__content-btn"data-modal>Перезвоните мне</button>
                     </div>
                     <div class="slider__img">

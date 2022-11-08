@@ -11,7 +11,7 @@ get_header();
 				?>
 					<div class="slider__inner">
 					<div class="slider__wrapper-block">
-						<div class="slider__block">
+						<div class="slider__block slider__block-page">
 							<div class="slider__content">
 								<div class="slider__content-title">
 								<?php the_field('zagolovok')?>
