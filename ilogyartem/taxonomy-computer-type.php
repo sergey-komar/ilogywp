@@ -65,158 +65,37 @@ get_header();
 				</h2>
 				<div class="copying__block">
 					<div class="copying__block-img">
-						<img src="<?php the_post_thumbnail_url();?>" alt="img">
+						<img src="<?php echo get_field('izobrazhenie_poleznyh_materialov')['url'];?>" alt="img">
 					</div>
 					<div class="copying__block-content">
-						<?php the_content();?>
+						<?php the_field('tekst_sprava_ot_izobrazhenie_poleznyh_materialov');;?>
 					</div>
 				</div>
-				<?php if(have_rows('abzaczy')) : while(have_rows('abzaczy')) : the_row(); ?>
+				<?php if(have_rows('taksonomiya_materialov')) : while(have_rows('taksonomiya_materialov')) : the_row(); ?>
 				<div class="copying__block-text">
-				<?php the_sub_field('abzacz1')?>
+				<?php the_sub_field('materialy_abzaczy')?>
 				</div>
 				<?php endwhile; endif; ?>
 
 
-				<div class="copying__subtitle"><?php the_field('podzagolovok')?></div>
+				<div class="copying__subtitle"><?php the_field('podzagolovk_materiala')?></div>
 				<p class="copying__subtitle-text">
-                	<?php the_field('tekst_4_abzacz')?>
+                	<?php the_field('4_abzacz_poleznyh_materialov')?>
 				</p>
 
 
 				<ul class="copying__list">
-					<?php if(have_rows('spisok')) : while(have_rows('spisok')) : the_row(); ?>
+					<?php if(have_rows('spisok_markirovannyj_poleznye_materialy')) : while(have_rows('spisok_markirovannyj_poleznye_materialy')) : the_row(); ?>
 					<li class="copying__list-item">
-						<img src="<?php the_sub_field('marktrovannyj_spisok_izobrazhenie')?>" alt="" class="copying__list-item-img">
-						<a href="#" class="copying__list-link"><?php the_sub_field('markirovannyj_spisok_tekst')?></a>
+						<img src="<?php the_sub_field('izobrazhenie_spisok_poleznye_materialy')?>" alt="" class="copying__list-item-img">
+						<a href="#" class="copying__list-link"><?php the_sub_field('tekst_spisok_poleznye_materialy')?></a>
 					</li>
 					<?php endwhile; endif; ?>
 				</ul>
 			</div>
 		</div>
 
-		<div class="work">
-			<div class="container">
-				<h3 class="work__title">Как мы работаем:</h3>
-				<div class="work__inner">
-					<div class="work__item">
-						<p class="work__item-text">
-						<?php the_field('pole1')?>
-						</p>
-						<div class="work__item-img">
-							<img src="<?php echo get_template_directory_uri()?>/assets/images/page/number-1.svg" alt="img">
-						</div>
-					</div>
-					<div class="work__item">
-						<p class="work__item-text">
-						<?php the_field('pole2')?>
-						</p>
-						<div class="work__item-img">
-							<img src="<?php echo get_template_directory_uri()?>/assets/images/page/number-2.svg" alt="img">
-						</div>
-					</div>
-					<div class="work__item">
-						<p class="work__item-text">
-						<?php the_field('pole3')?>
-						</p>
-						<div class="work__item-img">
-							<img src="<?php echo get_template_directory_uri()?>/assets/images/page/number-3.svg" alt="img">
-						</div>
-					</div>
-					<div class="work__item">
-						<p class="work__item-text">
-						<?php the_field('pole4')?>
-						</p>
-						<div class="work__item-img">
-							<img src="<?php echo get_template_directory_uri()?>/assets/images/page/number-4.svg" alt="img">
-						</div>
-					</div>
-					<div class="work__item">
-						<p class="work__item-text">
-						<?php the_field('pole5')?>
-						</p>
-						<div class="work__item-img">
-							<img src="<?php echo get_template_directory_uri()?>/assets/images/page/number-5.svg" alt="img">
-						</div>
-					</div>
-					<div class="work__item">
-						<p class="work__item-text">
-						<?php the_field('pole6')?>
-						</p>
-						<div class="work__item-img">
-							<img src="<?php echo get_template_directory_uri()?>/assets/images/page/number-6.svg" alt="img">
-						</div>
-					</div>
-					<div class="work__item">
-						<p class="work__item-text">
-						<?php the_field('pole7')?>
-						</p>
-						<div class="work__item-img">
-							<img src="<?php echo get_template_directory_uri()?>/assets/images/page/number-7.svg" alt="img">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="get">
-			<div class="container">
-				<div class="get__title">
-					Что вы получаете:
-				</div>
-				<div class="get__block">
-					<div class="get__item">
-						<div class="get__item-img">
-							<img src="<?php echo get_field('kartinka1')['url'];?>" alt="img">
-							<p class="get__item-text">
-							<?php the_field('tekst1')?>
-							</p>
-						</div>
-					</div>
-					<div class="get__item">
-						<div class="get__item-img">
-							<img src="<?php echo get_field('kartinka2')['url'];?>" alt="img">
-							<p class="get__item-text">
-							<?php the_field('tekst2')?>
-							</p>
-						</div>
-					</div>
-					<div class="get__item">
-						<div class="get__item-img">
-							<img src="<?php echo get_field('kartinka3')['url'];?>" alt="img">
-							<p class="get__item-text">
-							<?php the_field('tekst3')?>
-							</p>
-						</div>
-					</div>
-					<div class="get__item">
-						<div class="get__item-img">
-							<img src="<?php echo get_field('kartinka4')['url'];?>" alt="img">
-							<p class="get__item-text">
-							<?php the_field('tekst4')?>
-							</p>
-						</div>
-					</div>
-					<div class="get__item">
-						<div class="get__item-img">
-							<img src="<?php echo get_field('kartinka5')['url'];?>" alt="img">
-							<p class="get__item-text">
-							<?php the_field('tekst5')?>
-							</p>
-						</div>
-					</div>
-					<div class="get__item">
-						<div class="get__item-img">
-							<img src="<?php echo get_field('kartinka6')['url'];?>" alt="img">
-							<p class="get__item-text">
-							<?php the_field('tekst6')?>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
+		
 
 		<div class="table">
 			<div class="container">
@@ -227,12 +106,12 @@ get_header();
 						<div class="table-main__price">Стоимость </div>
 						<div class="table-main__desc">Описание услуги</div>
 					</div>
-					<?php if(have_rows('uslugi_vverh')) : while(have_rows('uslugi_vverh')) : the_row(); ?>
+					<?php if(have_rows('tablicza_poleznyh_materialov')) : while(have_rows('tablicza_poleznyh_materialov')) : the_row(); ?>
 					<div class="table__top">
-						<div class="table__top-title"><?php the_sub_field('uslugaya_pervaya')?></div>
-						<div class="table__top-price"><?php the_sub_field('stoimost_pervaya')?></div>
+						<div class="table__top-title"><?php the_sub_field('usluga_poleznyh_materialov')?></div>
+						<div class="table__top-price"><?php the_sub_field('stoimost_poleznyh_materialov')?></div>
 						<div class="table__top-desc">
-                        <?php the_sub_field('opisanie_pervoe')?>
+                        <?php the_sub_field('opisanie_poleznyh_materialov')?>
 						</div>
 					</div>
 					<?php endwhile; endif; ?>
@@ -257,33 +136,6 @@ get_header();
 		</div>
 
 
-		<div class="palm">
-			<div class="container">
-				<div class="palm__block">
-					<div class="palm__content">
-						<div class="palm__content-title">А знаете ли вы?</div>
-						<p class="palm__content-text">
-							А знаете ли вы, что можно контролироватьсотрудников сидя
-							на пляже прямо с вашего телефона
-						</p>
-						<?php 
-							if( get_the_terms( $post->ID, 'service-type' )){
-								
-							$cur_terms = get_the_terms( $post->ID, 'service-type' );
-							foreach( $cur_terms as $cur_term ){
-								echo '<a href="'. get_term_link( (int)$cur_term->term_id, $cur_term->taxonomy ) .'" class="palm__content-btn"> Подробнее</a>';
-							}
-							}
-						?>
-						
-						<!-- <button class="palm__content-btn"  data-modal>Подробнее</button> -->
-					</div>
-					<div class="palm__block-img">
-						<img src="<?php echo get_template_directory_uri();?>/assets/images/page/palm.jpg" alt="img">
-					</div>
-				</div>
-			</div>
-		</div>
 
 		<div class="news">
 			<div class="container">
@@ -321,7 +173,6 @@ get_header();
 				</div>
 			</div>
 		</div>
-
 		<div class="page-reviews">
 			<div class="container">
 				<div class="page-reviews__title">Отзывы</div>
@@ -338,7 +189,7 @@ get_header();
                             while ( $query->have_posts() ) {
                             $query->the_post();
                             ?>
-					<div class="page-reviews__slider-wrapper">
+					<a href="<?php the_permalink();?>" class="page-reviews__slider-wrapper">
 						<div class="page-reviews__slider-item">
 							<img class="page-reviews__slider-img" src="<?php the_post_thumbnail_url();?>" alt="img">
 
@@ -347,7 +198,7 @@ get_header();
 							<?php the_content();?>
 							</p>
 						</div>
-					</div>
+					</a>
 					<?php }
 							} 
 							else {

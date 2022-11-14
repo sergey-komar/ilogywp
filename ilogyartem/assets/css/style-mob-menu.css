@@ -80,7 +80,7 @@ li.menu-item:hover{
   margin-top: 40px !important;
 }
 .mega-sub-menu{
-  height: 380px !important;
+  height: 420px !important;
 }
 .menu-bottom__list .sub-menu li{
   text-align: start;
@@ -233,6 +233,7 @@ li.menu-item:hover{
 }
 .copying__block{
   align-items: flex-start;
+  justify-content: space-between;
 }
 .copying__list-item::before{
   display: none;
@@ -243,6 +244,13 @@ li.menu-item:hover{
 .copying__list-link{
   margin-left: 20px;
 }
+.table__top:nth-child(even){
+  background-color: #fff;
+}
+.site-content{
+  width: 1200px !important;
+}
+
 
 
 
@@ -869,6 +877,9 @@ position: absolute;
     .menu-top._active{
   overflow-x:hidden;
     }
+    .mega-menu-column.mega-menu-columns-3-of-12.mega-menu-clear{
+     height: 150px !important;
+  }
 
 }
 

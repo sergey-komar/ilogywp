@@ -267,9 +267,9 @@ get_header();
 							на пляже прямо с вашего телефона
 						</p>
 						<?php 
-							if( get_the_terms( $post->ID, 'service-type' )){
+							if( get_the_terms( $post->ID, 'ccc-type' )){
 								
-							$cur_terms = get_the_terms( $post->ID, 'service-type' );
+							$cur_terms = get_the_terms( $post->ID, 'ccc-type' );
 							foreach( $cur_terms as $cur_term ){
 								echo '<a href="'. get_term_link( (int)$cur_term->term_id, $cur_term->taxonomy ) .'" class="palm__content-btn"> Подробнее</a>';
 							}

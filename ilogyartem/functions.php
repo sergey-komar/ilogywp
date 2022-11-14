@@ -160,6 +160,25 @@ function wayup_register_custom_post_types (){
 		// 'rewrite'             => array('slug' => 'service'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'service-type', [ 'service' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
+
 
 	register_post_type( 'computer', [
 		'labels' => [
@@ -199,6 +218,28 @@ function wayup_register_custom_post_types (){
 		'rewrite'             => array('slug' => 'computer'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'computer-type', [ 'computer' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+			'add_or_remove_items'        => 'Добавить или удалить Метку'
+
+			
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
+
 
     register_post_type( 'servers', [
 		'labels' => [
@@ -238,6 +279,24 @@ function wayup_register_custom_post_types (){
 		'rewrite'             => array('slug' => 'servers'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'servers-type', [ 'servers' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
 
 	register_post_type( 'seti', [
 		'labels' => [
@@ -261,6 +320,24 @@ function wayup_register_custom_post_types (){
 		'rewrite'             => array('slug' => 'seti'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'seti-type', [ 'seti' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
 
 
 	register_post_type( 'ccc', [
@@ -282,9 +359,27 @@ function wayup_register_custom_post_types (){
 		'taxonomies'          => [],
 		'has_archive'         => true,
 		// 'rewrite'             => true,
-		'rewrite'             => array('slug' => 'cc'),
+		'rewrite'             => array('slug' => '1c'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'ccc-type', [ 'ccc' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
 
 
 	register_post_type( 'rezervnoe', [
@@ -309,6 +404,25 @@ function wayup_register_custom_post_types (){
 		'rewrite'             => array('slug' => 'rezerv'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'rezervnoe-type', [ 'rezervnoe' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
+
 
 	register_post_type( 'udalenka', [
 		'labels' => [
@@ -332,6 +446,26 @@ function wayup_register_custom_post_types (){
 		'rewrite'             => array('slug' => 'udalenka'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'udalenka-type', [ 'udalenka' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
+
+
 
 	register_post_type( 'video', [
 		'labels' => [
@@ -355,6 +489,25 @@ function wayup_register_custom_post_types (){
 		'rewrite'             => array('slug' => 'video'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'video-type', [ 'video' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
+
 
 
 	register_post_type( 'dannie', [
@@ -379,6 +532,25 @@ function wayup_register_custom_post_types (){
 		'rewrite'             => array('slug' => 'dannie'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'dannie-type', [ 'dannie' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
+
 
 
 	register_post_type( 'montash', [
@@ -403,6 +575,25 @@ function wayup_register_custom_post_types (){
 		'rewrite'             => array('slug' => 'montash'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'montash-type', [ 'montash' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
+
 
 
 
@@ -428,6 +619,25 @@ function wayup_register_custom_post_types (){
 		'rewrite'             => array('slug' => 'phone'),
 		'query_var'           => true,
 	] );
+	register_taxonomy( 'phone-type', [ 'phone' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
+	] );
+
+
+
+
+
 
 	register_post_type( 'otherr', [
 		'labels' => [
@@ -450,6 +660,20 @@ function wayup_register_custom_post_types (){
 		// 'rewrite'             => true,
 		'rewrite'             => array('slug' => 'otherr'),
 		'query_var'           => true,
+	] );
+	register_taxonomy( 'otherr-type', [ 'otherr' ], [
+		'label'                 => '', // определяется параметром $labels->name
+		'labels'                => [
+			'name'              => 'Категории',
+			'add_new_item'      => 'Добавить категорию',
+			'menu_name'         => 'Категории',
+		
+		],
+		'description'           => '', // описание таксономии
+		'public'                => true,
+		'hierarchical'          => true,
+		// 'rewrite'             => array('slug' => 'service-type'),
+		'rewrite'               => true,
 	] );
 
 
@@ -654,6 +878,23 @@ register_post_type( 'materials', [
 	'rewrite'             => array('slug' => 'materials'),
 	'query_var'           => true,
 ] );
+
+
+register_taxonomy( 'materials-type', [ 'materials' ], [
+	'label'                 => '', // определяется параметром $labels->name
+	'labels'                => [
+		'name'              => 'Категории',
+		'add_new_item'      => 'Добавить категорию',
+		'menu_name'         => 'Категории',
+	
+	],
+	'description'           => '', // описание таксономии
+	'public'                => true,
+	'hierarchical'          => true,
+	// 'rewrite'             => array('slug' => 'service-type'),
+	'rewrite'               => true,
+] );
+
 
 }
 
